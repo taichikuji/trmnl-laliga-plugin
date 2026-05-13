@@ -2,7 +2,7 @@
   <div class="columns">
     <div class="column">
       <div class="richtext richtext--center gap--medium">
-        <span class="title title--large lg:title--xlarge" data-pixel-perfect="true">{{ t_title_long }}</span>
+        <span class="title title--large lg:title--xlarge" data-pixel-perfect="true">{{ t_title }}</span>
 
         <div class="mt--2 lg:mt--4">
           <span class="title title--xlarge lg:title--xxlarge" style="font-size: 80px; line-height: 1;">{{ t_blocked_text }}</span>
@@ -16,4 +16,7 @@
   </div>
 </div>
 
-{% render 'title_bar', svg_logo: svg_logo, title: t_status_bar, update_time: t_updated_text %}
+{% render 'title_bar'
+  , svg_logo: svg_logo
+  , title: t_status_bar
+  , update_time: t_updated_text %}
