@@ -6,7 +6,9 @@
 
 {%- assign is_blocked = false -%}
 {%- assign dns_status = Status | append: '' -%}
-{%- if dns_status == '0' and Answer != blank -%}
+{%- assign answer_count = Answer | size | plus: 0 -%}
+{%- assign active_block_threshold = 25 -%}
+{%- if dns_status == '0' and answer_count > active_block_threshold -%}
   {%- assign is_blocked = true -%}
 {%- endif -%}
 
