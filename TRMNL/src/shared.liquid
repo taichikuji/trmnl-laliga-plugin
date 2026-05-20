@@ -10,6 +10,7 @@
 {%- if dns_status == '0' and answer_count > 25 -%}
   {%- assign is_blocked = true -%}
 {%- endif -%}
+{%- assign t_status_bar = 'hayahora.futbol' -%}
 
 {%- if lang == 'english' -%}
   {%- assign t_title = 'Is there football now?' -%}
@@ -19,7 +20,6 @@
   {%- assign t_desc_yes = '...and therefore, hundreds of legitimate websites are inaccessible.' -%}
   {%- assign t_desc_no_long = '...but when there is, hundreds of legitimate websites are inaccessible from the main Spanish ISPs.' -%}
   {%- assign t_desc_no = '...but when there is, hundreds of websites are inaccessible.' -%}
-  {%- assign t_status_bar = 'La Liga Status' -%}
   {%- assign t_updated_label = 'Updated:' -%}
 {%- else -%}
   {%- assign t_title = '¿Hay ahora fútbol?' -%}
@@ -29,7 +29,6 @@
   {%- assign t_desc_yes = '...y por tanto, cientos de webs legítimas están inaccesibles.' -%}
   {%- assign t_desc_no_long = '...pero, cuando lo hay, cientos de webs legítimas están inaccesibles desde los principales ISPs españoles.' -%}
   {%- assign t_desc_no = '...pero, cuando lo hay, cientos de webs están inaccesibles.' -%}
-  {%- assign t_status_bar = 'Estado de LaLiga' -%}
   {%- assign t_updated_label = 'Actualizado:' -%}
 {%- endif -%}
 {%- assign _ts = trmnl.system.timestamp_utc | default: 'now' -%}
