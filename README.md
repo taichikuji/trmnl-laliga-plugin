@@ -15,3 +15,5 @@ Run the template through the TRMNL's Web UI for testing.
 
 - [TRMNLP repo](https://github.com/usetrmnl/trmnlp)
 - [TRMNL Private Plugins Templates Documentation](https://docs.usetrmnl.com/go/private-plugins/templates)
+- [¿Hay ahora fútbol?](https://hayahora.futbol/)
+- [Open Observatory of Network Interference](https://ooni.org/)
