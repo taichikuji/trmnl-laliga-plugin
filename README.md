@@ -1,6 +1,6 @@
-# trmnl-la-liga-plugin
+# trmnl-laliga-plugin
 
-TRMNL plugin to monitor La Liga's internet blockade status in Spain. Checks DNS resolution via Google DoH to detect active blocks. Status + TRMNL templates. This README is focused on development and improving the project.
+TRMNL plugin to monitor LaLiga's internet blockade status in Spain. Checks DNS resolution via Google DoH to detect active blocks. Status + TRMNL templates. This README is focused on development and improving the project.
 
 Install it [here](https://trmnl.com/recipes/294074)!
 ## Requirements
