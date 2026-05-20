@@ -28,4 +28,4 @@ custom_fields:
   description: "Created by Ivan Perez. This plugin is for monitoring La Liga internet blockades on your TRMNL device."
   category: "news"
   learn_more_url: "https://discordid.taichikuji.org/discord"
-  github_url: "https://github.com/taichikuji/trmnl-la-liga-plugin"
+  github_url: "https://github.com/taichikuji/trmnl-laliga-plugin"
