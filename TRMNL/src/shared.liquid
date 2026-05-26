@@ -16,21 +16,18 @@
   {%- assign t_title = 'Is there football now?' -%}
   {%- assign t_blocked_yes = 'YES' -%}
   {%- assign t_blocked_no = 'NO' -%}
-  {%- assign t_desc_yes_long = '...and therefore, hundreds of legitimate websites are inaccessible from the main Spanish ISPs.' -%}
   {%- assign t_desc_yes = '...and therefore, hundreds of legitimate websites are inaccessible.' -%}
-  {%- assign t_desc_no_long = '...but when there is, hundreds of legitimate websites are inaccessible from the main Spanish ISPs.' -%}
   {%- assign t_desc_no = '...but when there is, hundreds of websites are inaccessible.' -%}
   {%- assign t_updated_label = 'Updated:' -%}
 {%- else -%}
   {%- assign t_title = '¿Hay ahora fútbol?' -%}
   {%- assign t_blocked_yes = 'SÍ' -%}
   {%- assign t_blocked_no = 'NO' -%}
-  {%- assign t_desc_yes_long = '...y por tanto, cientos de webs legítimas están inaccesibles desde los principales ISPs españoles.' -%}
   {%- assign t_desc_yes = '...y por tanto, cientos de webs legítimas están inaccesibles.' -%}
-  {%- assign t_desc_no_long = '...pero, cuando lo hay, cientos de webs legítimas están inaccesibles desde los principales ISPs españoles.' -%}
   {%- assign t_desc_no = '...pero, cuando lo hay, cientos de webs están inaccesibles.' -%}
   {%- assign t_updated_label = 'Actualizado:' -%}
 {%- endif -%}
+
 {%- assign _ts = trmnl.system.timestamp_utc | default: 'now' -%}
 {%- assign t_updated_val = _ts | date: "%s" | plus: trmnl.user.utc_offset | date: "%H:%M" -%}
 
@@ -43,6 +40,7 @@
   {%- assign t_desc_long = t_desc_no_long -%}
   {%- assign t_desc = t_desc_no -%}
 {%- endif -%}
+
 
 {%- assign t_updated_text = t_updated_label | append: ' ' | append: t_updated_val -%}
 

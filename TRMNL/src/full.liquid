@@ -1,22 +1,14 @@
-<div class="layout">
-  <div class="columns">
-    <div class="column">
-      <div class="richtext richtext--center gap--medium">
-        <span class="title title--large lg:title--xlarge" data-pixel-perfect="true">{{ t_title }}</span>
+<div class="layout layout--col layout--center gap--large text--center">
+  <span class="title title--large lg:title--xxlarge" data-pixel-perfect="true">{{ t_title }}</span>
 
-        <div class="mt--2 lg:mt--4">
-          <span class="title title--xlarge lg:title--xxlarge" style="font-size: 80px; line-height: 1;">{{ t_blocked_text }}</span>
-        </div>
+  <span class="value value--giga text--black" data-fit-value="true">{{ t_blocked_text }}</span>
 
-        <div class="description description--large lg:title--small text--gray text--center">
-          {{ t_desc_long }}
-        </div>
-      </div>
-    </div>
-  </div>
+  <span class="description description--large lg:description--xlarge text--gray-50 1bit:hidden">
+    {{ t_desc }}
+  </span>
+  <span class="description description--large lg:description--xlarge text--black hidden 1bit:inline-block">
+    {{ t_desc }}
+  </span>
 </div>
 
-{% render 'title_bar'
-  , svg_logo: svg_logo
-  , title: t_status_bar
-  , update_time: t_updated_text %}
+{% render 'title_bar', svg_logo: svg_logo, title: t_status_bar, update_time: t_updated_text %}
