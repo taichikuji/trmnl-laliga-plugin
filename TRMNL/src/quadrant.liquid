@@ -1,7 +1,13 @@
-<div class="layout layout--col layout--center gap text--center px--2">
-  <span class="title title--large lg:title--xlarge" data-pixel-perfect="true">{{ t_title }}</span>
+<div class="layout layout--col layout--center gap text--center px--2 laliga-compact">
+  <span class="title title--large lg:title--xlarge">{{ t_title }}</span>
 
-  <span class="value value--xxlarge lg:value--xxxlarge text--black" data-fit-value="true">{{ t_blocked_text }}</span>
+  {% render 'status_result',
+    state: state,
+    answer: t_answer,
+    answer_class: answer_class,
+    svg_logo: svg_logo,
+    value_class: 'value--xxlarge lg:value--xxxlarge'
+  %}
 </div>
 
-{% render 'title_bar', svg_logo: svg_logo, title: t_status_bar, update_time: t_updated_text %}
+{% render 'laliga_title_bar', svg_logo: svg_logo, title: 'hayahora.futbol', update_time: updated_text %}
