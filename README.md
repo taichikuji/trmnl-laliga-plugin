@@ -12,7 +12,7 @@ Install it [from the TRMNL recipe directory](https://trmnl.com/recipes/294074).
 - Responsive layouts for TRMNL OG, BWRY and TRMNL X
 - Football decoration when blocking is active
 
-The plugin checks the public `blocked.dns.hayahora.futbol` signal through Google DNS. A successful response with more than ten addresses means mass blocking is active; an `NXDOMAIN` response means no mass blocking is detected. Other responses are shown as unavailable instead of reporting a false negative. The status wording matches hayahora.futbol.
+The plugin checks the public `blocked.dns.hayahora.futbol` signal through Google DNS. A successful DNS response means mass blocking is active; an `NXDOMAIN` response means no mass blocking is detected. Other responses are shown as unavailable instead of reporting a false negative. The status wording matches hayahora.futbol.
 
 ## Local development
 

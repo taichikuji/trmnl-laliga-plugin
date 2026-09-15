@@ -7,6 +7,12 @@ const blocked = { Status: 0, Answer: Array.from({ length: 11 }, (_, i) => ({ dat
 const clear = { Status: 3 };
 const unknown = { Status: 2 };
 
+test('a successful DNS response remains active when TRMNL clips its answers', async () => {
+  const html = await render('full', { Status: 0 });
+  assert.match(html, />SÍ</);
+  assert.equal((html.match(/laliga-ball"/g) || []).length, 2);
+});
+
 for (const mode of modes) {
   test(`${mode}: renders active blocking in Spanish`, async () => {
     const html = await render(mode, blocked);

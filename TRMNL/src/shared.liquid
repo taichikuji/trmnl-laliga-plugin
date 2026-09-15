@@ -4,9 +4,8 @@
 {%- assign lang_value = trmnl.plugin_settings.custom_fields_values.language | default: language | default: 'Spanish' -%}
 {%- assign lang = lang_value | downcase -%}
 {%- assign dns_status = Status | append: '' -%}
-{%- assign answer_count = Answer | size -%}
 {%- assign state = 'unknown' -%}
-{%- if dns_status == '0' and answer_count > 10 -%}
+{%- if dns_status == '0' -%}
   {%- assign state = 'blocked' -%}
 {%- elsif dns_status == '3' -%}
   {%- assign state = 'clear' -%}
