@@ -5,13 +5,7 @@ import { render } from './render.mjs';
 const modes = ['full', 'half_horizontal', 'half_vertical', 'quadrant'];
 const blocked = { Status: 0, Answer: Array.from({ length: 11 }, (_, i) => ({ data: `192.0.2.${i}` })) };
 const clear = { Status: 3 };
-const unknown = { Status: 2 };
-
-test('a successful DNS response remains active when TRMNL clips its answers', async () => {
-  const html = await render('full', { Status: 0 });
-  assert.match(html, />SÍ</);
-  assert.equal((html.match(/laliga-ball"/g) || []).length, 2);
-});
+const belowThreshold = { Status: 0, Answer: Array.from({ length: 10 }, (_, i) => ({ data: `192.0.2.${i}` })) };
 
 for (const mode of modes) {
   test(`${mode}: renders active blocking in Spanish`, async () => {
@@ -34,11 +28,11 @@ for (const mode of modes) {
     assert.match(html, /text--black/);
   });
 
-  test(`${mode}: does not report an API problem as clear`, async () => {
-    const html = await render(mode, unknown);
-    if (mode !== 'quadrant') assert.match(html, /El estado actual es desconocido/);
-    assert.match(html, /text--gray-50/);
-    assert.doesNotMatch(html, />NO</);
+  test(`${mode}: requires more than ten addresses before reporting active blocking`, async () => {
+    const html = await render(mode, belowThreshold);
+    assert.match(html, />NO</);
+    assert.doesNotMatch(html, />SÍ</);
+    assert.doesNotMatch(html, /laliga-ball"/);
   });
 }
 

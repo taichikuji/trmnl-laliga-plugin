@@ -6,7 +6,6 @@ A TRMNL plugin that monitors the public DNS signal maintained by [hayahora.futbo
 
 - **Active:** red answer, the source wording and football decoration
 - **Clear:** direct black answer with the source wording
-- **Unavailable:** neutral answer when the DNS response cannot confirm either state
 
 All states remain readable in grayscale. The layouts scale for TRMNL OG, BWRY, TRMNL X landscape and TRMNL X portrait.
 
