@@ -11,6 +11,7 @@ Install it [from the TRMNL recipe directory](https://trmnl.com/recipes/294074).
 - A restrained BWRY accent with a grayscale-safe fallback
 - Responsive layouts for TRMNL OG, BWRY and TRMNL X
 - Football decoration when blocking is active
+- Live blocked IP count in the title bar
 
 The plugin checks the public `blocked.dns.hayahora.futbol` signal through Google DNS. A successful response with more than ten addresses means mass blocking is active; smaller answer sets and `NXDOMAIN` responses are treated as inactive to avoid false positives. The status wording matches hayahora.futbol.
 

@@ -6,8 +6,10 @@
 {%- assign dns_status = Status | append: '' -%}
 {%- assign answer_count = Answer | size -%}
 {%- assign state = 'clear' -%}
+{%- assign blocked_ip_count = 0 -%}
 {%- if dns_status == '0' and answer_count > 10 -%}
   {%- assign state = 'blocked' -%}
+  {%- assign blocked_ip_count = answer_count -%}
 {%- endif -%}
 
 {%- if lang == 'english' -%}
@@ -17,6 +19,7 @@
   {%- assign t_blocked_desc = '...and therefore, hundreds of legitimate websites are inaccessible from the main Spanish ISPs.' -%}
   {%- assign t_clear_desc = '...but when there is, hundreds of legitimate websites are inaccessible from the main Spanish ISPs.' -%}
   {%- assign t_updated_label = 'Updated' -%}
+  {%- assign t_blocked_ips = 'blocked IPs' -%}
 {%- else -%}
   {%- assign t_title = '¿Hay ahora fútbol?' -%}
   {%- assign t_blocked = 'SÍ' -%}
@@ -24,6 +27,7 @@
   {%- assign t_blocked_desc = '...y por tanto, cientos de webs legítimas están inaccesibles desde los principales ISPs españoles.' -%}
   {%- assign t_clear_desc = '...pero, cuando lo hay, cientos de webs legítimas están inaccesibles desde los principales ISPs españoles.' -%}
   {%- assign t_updated_label = 'Actualizado' -%}
+  {%- assign t_blocked_ips = 'IPs bloqueadas' -%}
 {%- endif -%}
 
 {%- if state == 'blocked' -%}
@@ -38,7 +42,7 @@
 
 {%- assign timestamp = trmnl.system.timestamp_utc | default: 'now' -%}
 {%- assign updated_time = timestamp | date: '%s' | plus: trmnl.user.utc_offset | date: '%H:%M' -%}
-{%- assign updated_text = t_updated_label | append: ' · ' | append: updated_time -%}
+{%- assign updated_text = t_updated_label | append: ' · ' | append: updated_time | append: ' · ' | append: blocked_ip_count | append: ' ' | append: t_blocked_ips -%}
 
 <style>
   .laliga-answer-row { display: flex; align-items: center; justify-content: center; gap: 14px; width: 100%; }
