@@ -16,7 +16,7 @@ The plugin checks the public `blocked.dns.hayahora.futbol` signal through Google
 
 ## Local development
 
-Open `TRMNL/` with [TRMNLP](https://github.com/usetrmnl/trmnlp) to preview the layouts. Run the Liquid rendering checks with `bun test`.
+Open `TRMNL/` with [TRMNLP](https://github.com/usetrmnl/trmnlp) to preview the layouts.
 
 ## References
 
