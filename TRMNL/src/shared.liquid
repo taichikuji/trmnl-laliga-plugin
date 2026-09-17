@@ -42,7 +42,8 @@
 
 {%- assign timestamp = trmnl.system.timestamp_utc | default: 'now' -%}
 {%- assign updated_time = timestamp | date: '%s' | plus: trmnl.user.utc_offset | date: '%H:%M' -%}
-{%- assign updated_text = t_updated_label | append: ' · ' | append: updated_time | append: ' · ' | append: blocked_ip_count | append: ' ' | append: t_blocked_ips -%}
+{%- assign blocked_text = blocked_ip_count | append: ' ' | append: t_blocked_ips -%}
+{%- assign updated_text = t_updated_label | append: ' · ' | append: updated_time -%}
 
 <style>
   .laliga-answer-row { display: flex; align-items: center; justify-content: center; gap: 14px; width: 100%; }
@@ -59,12 +60,13 @@
     {% if state == 'blocked' %}<img class="image image--adaptive laliga-ball" src="data:image/svg+xml;base64,{{ svg_logo | base64_encode }}" alt="">{% endif %}
   </div>
   {% if description != blank %}<span class="description {{ description_class }}">{{ description }}</span>{% endif %}
+  {% if blocked_text != blank %}<span class="description {{ description_class }}">{{ blocked_text }}</span>{% endif %}
 {% endtemplate %}
 
 {% template laliga_title_bar %}
   <div class="title_bar">
     <img class="image image--adaptive" src="data:image/svg+xml;base64,{{ svg_logo | base64_encode }}" width="28" height="28" alt="Football">
     <span class="title">{{ title }}</span>
-    <span class="instance">{{ update_time }}</span>
+    <span class="instance" data-clamp="1">{{ update_time }}</span>
   </div>
 {% endtemplate %}
