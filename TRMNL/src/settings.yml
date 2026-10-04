@@ -2,6 +2,7 @@
 # Changes to this file will be overwritten by `trmnlp pull`.
 #
 ---
+description: Spanish football blocking status
 strategy: polling
 no_screen_padding: 'no'
 dark_mode: 'no'
@@ -27,5 +28,5 @@ custom_fields:
   name: About This Plugin
   description: "Created by Ivan Perez. This plugin is for monitoring La Liga internet blockades on your TRMNL device."
   category: "news"
-  learn_more_url: "https://discordid.taichikuji.org/discord"
+  learn_more_url: https://github.com/taichikuji/trmnl-laliga-plugin/tree/main/TRMNL#setup
   github_url: "https://github.com/taichikuji/trmnl-laliga-plugin"
