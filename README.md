@@ -8,7 +8,7 @@ See whether the mass IP blocking associated with Spanish football matches is act
 
 ![Spanish football IP blocking status on TRMNL](TRMNL/media/preview_full.webp)
 
-[All layout previews](TRMNL#previews).
+[All layout previews](TRMNL/README.md#previews).
 
 ## Settings
 
@@ -28,6 +28,6 @@ cd TRMNL
 trmnlp serve
 ```
 
-Templates and settings live in [TRMNL/src/](TRMNL/src/); see the [plugin guide](TRMNL) for setup and layout details.
+Templates and settings live in [TRMNL/src/](TRMNL/src/); see the [plugin guide](TRMNL/README.md) for setup and layout details.
 
 [Questions or ideas?](https://github.com/taichikuji/trmnl-laliga-plugin/issues) · [License](LICENSE)
