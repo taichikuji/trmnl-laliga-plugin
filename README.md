@@ -8,7 +8,7 @@ See whether the mass IP blocking associated with Spanish football matches is act
 
 ![Spanish football IP blocking status on TRMNL](TRMNL/media/preview_full.webp)
 
-[All layout previews](TRMNL/README.md#previews).
+Demo blocking status, not a live reading. [All layout previews](TRMNL/README.md#previews).
 
 ## Settings
 

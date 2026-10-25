@@ -4,6 +4,8 @@ A TRMNL plugin that monitors the public DNS signal maintained by [hayahora.futbo
 
 ## Previews
 
+Previews render the current Liquid templates in Spanish with a synthetic active-blocking response of 325 IPs, at 12:00 CET on 25 October 2026. They are demo images, not live blocking status.
+
 | Full View | Half Horizontal View |
 |------------|----------------------|
 | ![Full blocking status view](media/preview_full.webp) | ![Half horizontal blocking status view](media/preview_half_horizontal.webp) |
