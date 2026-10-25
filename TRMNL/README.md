@@ -2,6 +2,16 @@
 
 A TRMNL plugin that monitors the public DNS signal maintained by [hayahora.futbol](https://hayahora.futbol/).
 
+## Previews
+
+| Full View | Half Horizontal View |
+|------------|----------------------|
+| ![Full blocking status view](media/preview_full.webp) | ![Half horizontal blocking status view](media/preview_half_horizontal.webp) |
+
+| Half Vertical View | Quadrant View |
+|-------------------|----------------|
+| ![Half vertical blocking status view](media/preview_half_vertical.webp) | ![Quadrant blocking status view](media/preview_quadrant.webp) |
+
 ## States
 
 - **Active:** red answer, the source wording and football decoration

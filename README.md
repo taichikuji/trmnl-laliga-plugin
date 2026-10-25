@@ -1,28 +1,33 @@
-# LaLiga blocking status for TRMNL
+# ¿Hay ahora fútbol?
 
-A TRMNL plugin that shows whether the mass IP blocking associated with Spanish football matches is active.
+See whether the mass IP blocking associated with Spanish football matches is active, straight from your TRMNL. A clear yes or no, with the blocked IP count in the title bar.
 
-Install it [from the TRMNL recipe directory](https://trmnl.com/recipes/294074).
+<a href="https://trmnl.com/recipes/294074"><img width="150" alt="Works with TRMNL" src="https://trmnl.com/images/brand/badges/light/works-with-trmnl/trmnl-badge-works-with-light.svg" /></a>
 
-## Features
+[Install on TRMNL](https://trmnl.com/recipes/294074)
 
-- Clear active and inactive states
-- Spanish and English interfaces
-- A restrained BWRY accent with a grayscale-safe fallback
-- Responsive layouts for TRMNL OG, BWRY and TRMNL X
-- Football decoration when blocking is active
-- Live blocked IP count in the title bar
+![Spanish football IP blocking status on TRMNL](TRMNL/media/preview_full.webp)
 
-The plugin checks the public `blocked.dns.hayahora.futbol` signal through Google DNS. A successful response with more than ten addresses means mass blocking is active; smaller answer sets and `NXDOMAIN` responses are treated as inactive to avoid false positives. The status wording matches hayahora.futbol.
+[All layout previews](TRMNL#previews).
 
-## Local development
+## Settings
 
-Open `TRMNL/` with [TRMNLP](https://github.com/usetrmnl/trmnlp) to preview the layouts.
+- **Language:** Spanish or English (defaults to Spanish).
+- No account or API key needed.
 
-## References
+Full, half horizontal, half vertical and quadrant layouts support TRMNL OG, BWRY and TRMNL X, including portrait. Active blocking gets a red accent on BWRY and remains readable in grayscale. Data refreshes every 15 minutes.
 
-- [¿Hay ahora fútbol?](https://hayahora.futbol/)
-- [Public Google DNS API](https://developers.google.com/speed/public-dns/docs/doh/json)
-- [TRMNL screen templates](https://docs.trmnl.com/go/private-plugins/templates)
-- [TRMNL X guide](https://trmnl.com/framework/docs/3.3/trmnl_x_guide)
-- [TRMNL color palettes](https://trmnl.com/framework/docs/3.3/color_palettes)
+The plugin reads [hayahora.futbol](https://hayahora.futbol/)'s public `blocked.dns.hayahora.futbol` signal through Google DNS. More than ten returned addresses means active blocking; smaller answer sets and `NXDOMAIN` mean inactive. This is the source's signal, not a test of your own connection.
+
+## Develop locally
+
+Install [trmnlp](https://github.com/usetrmnl/trmnlp), then run from the repository root:
+
+```sh
+cd TRMNL
+trmnlp serve
+```
+
+Templates and settings live in [TRMNL/src/](TRMNL/src/); see the [plugin guide](TRMNL) for setup and layout details.
+
+[Questions or ideas?](https://github.com/taichikuji/trmnl-laliga-plugin/issues) · [License](LICENSE)
