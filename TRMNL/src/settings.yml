@@ -2,7 +2,7 @@
 # Changes to this file will be overwritten by `trmnlp pull`.
 #
 ---
-description: Spanish football blocking status
+description: Spanish football IP block status
 strategy: polling
 no_screen_padding: 'no'
 dark_mode: 'no'
@@ -26,7 +26,16 @@ custom_fields:
 - keyname: author_bio
   field_type: author_bio
   name: About This Plugin
-  description: "Created by Ivan Perez. This plugin is for monitoring La Liga internet blockades on your TRMNL device."
+  description: >-
+    Is football-related IP blocking active in Spain? ¿Hay ahora fútbol? displays a clear yes
+    or no on your TRMNL, based on the public signal provided by hayahora.futbol. During
+    periods of blocking, it also shows the number of IP addresses reported by that signal.
+    This is not a live football score, fixture calendar or proof that a match is currently
+    being played. It is an indicator of internet blocking associated with Spanish football
+    broadcasting. The data is fetched through Google's public DNS resolver and refreshes
+    every 15 minutes. Choose Spanish or English for the interface. No login, API key or
+    external service account is required. Created by Ivan Perez to make this otherwise
+    invisible network status easy to check.
   category: "news,sports"
   learn_more_url: https://github.com/taichikuji/trmnl-laliga-plugin/tree/main/TRMNL#setup
   github_url: "https://github.com/taichikuji/trmnl-laliga-plugin"
