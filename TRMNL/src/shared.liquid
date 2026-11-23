@@ -4,12 +4,13 @@
 {%- assign lang_value = trmnl.plugin_settings.custom_fields_values.language | default: language | default: 'Spanish' -%}
 {%- assign lang = lang_value | downcase -%}
 {%- assign dns_status = Status | append: '' -%}
-{%- assign answer_count = Answer | size -%}
 {%- assign state = 'clear' -%}
 {%- assign blocked_ip_count = 0 -%}
-{%- if dns_status == '0' and answer_count > 10 -%}
-  {%- assign state = 'blocked' -%}
-  {%- assign blocked_ip_count = answer_count -%}
+{%- if dns_status == '0' -%}
+  {%- assign blocked_ip_count = Answer | size -%}
+  {%- if blocked_ip_count > 10 -%}
+    {%- assign state = 'blocked' -%}
+  {%- endif -%}
 {%- endif -%}
 
 {%- if lang == 'english' -%}
